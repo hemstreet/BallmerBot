@@ -10,6 +10,12 @@
 
 ballmerBot.pour(0,2);
 
+setTimeout(function() {
+    ballmerBot.pour(1,1);
+    ballmerBot.pour(2,2);
+    ballmerBot.pour(3,3);
+},2500)
+
 //app.use('/', express.static(__dirname + '/app'));
 //
 //app.get('/', function (req, res) {
