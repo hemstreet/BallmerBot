@@ -1,10 +1,10 @@
 "use strict";
 
-var express = require('express'),
-    app = express(),
-    Socket = require('./lib/Socket'),
-    config = require('./config/config'),
-    argv = require('yargs').argv,
+//var express = require('express'),
+    //app = express(),
+    //Socket = require('./lib/Socket'),
+    var config = require('./config/config'),
+    //argv = require('yargs').argv,
     BallmerBot = require('./lib/BallmerBot'),
     ballmerBot = new BallmerBot(config);
 
