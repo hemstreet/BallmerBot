@@ -14,3 +14,13 @@ Original Comic
 
 Calculator
 [http://www.ballmerpeakathon.com/calc](http://www.ballmerpeakathon.com/calc)
+
+Troubleshooting
+===
+
+For errors like
+```
+Error when trying to open pin 16
+gpio-admin: failed to change group ownership of /sys/devices/virtual/gpio/gpio23/direction: No such file or directory
+``````
+run `gpio-admin export 16`
