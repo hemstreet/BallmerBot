@@ -11,9 +11,9 @@
 ballmerBot.pour(0,2);
 
 setTimeout(function() {
-    ballmerBot.pour(1,1);
-    ballmerBot.pour(2,2);
-    ballmerBot.pour(3,3);
+    ballmerBot.pour(1,0.5);
+    //ballmerBot.pour(2,1);
+    //ballmerBot.pour(3,1);
 },2500)
 
 //app.use('/', express.static(__dirname + '/app'));
