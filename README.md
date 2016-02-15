@@ -26,3 +26,9 @@ Error when trying to open pin 16
 gpio-admin: failed to change group ownership of /sys/devices/virtual/gpio/gpio23/direction: No such file or directory
 ``````
 run `gpio-admin export 16`
+
+@TODO
+===
+    * web dashboard to add drinks
+    * "Mixologist" Menu, on the fly drinks w/ input from the user at certain amount pours
+
