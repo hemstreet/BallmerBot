@@ -8,11 +8,11 @@
     BallmerBot = require('./lib/BallmerBot'),
     ballmerBot = new BallmerBot(config);
 
-ballmerBot.pour(0,0.5);
+ballmerBot.pour(0,1);
 ballmerBot.pour(1,1);
-ballmerBot.pour(2,1.5);
-ballmerBot.pour(3,2);
-ballmerBot.pour(4,2.5);
+ballmerBot.pour(2,1);
+ballmerBot.pour(3,1);
+ballmerBot.pour(4,1);
 
 //app.use('/', express.static(__dirname + '/app'));
 //
