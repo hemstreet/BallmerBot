@@ -30,6 +30,7 @@ run `gpio-admin export 16`
 @TODO
 ===
 * [ ]  web dashboard to add drinks
+* [ ] Implement prep / flushing of the tubes
 * [ ] "Mixologist" Menu, on the fly drinks w/ input from the user at certain amount pours
 * [ ] Voice controlled drink delivery (https://wit.ai)[https://wit.ai/docs/nodejs/2.0.0/quickstart]
 
