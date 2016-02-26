@@ -3,7 +3,6 @@ Ballmer Bot
 
 ***Work in progress***
 
-@TODO: Remove pi-gpio or pi-gpio-promise from package.json
 Raspberry pi controller drink maker to reach ballmer's peak.
 
 The concept of Ballmer's peak stems from the xkcd article where it point in which you have had enough drinks to be
