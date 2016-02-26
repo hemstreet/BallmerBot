@@ -1,4 +1,4 @@
-Importing the STL should do the trick.
+Importing the STL should do the trick. I had to Auto Size my stl file
 
 I also included the gcode and .3w ( base64 encoded gcode file, you can follow the guide below )
 
