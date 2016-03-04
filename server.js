@@ -5,7 +5,7 @@
 //Socket = require('./lib/Socket'),
 var config = require('./config/config'),
     argv = require('yargs').argv,
-    lib = (argv.mock) ? 'mock' : 'lib',
+    lib = (!argv.mock) ? 'lib' : 'mock',
     BallmerBot = require('./' + lib + '/BallmerBot'),
     ballmerBot = new BallmerBot(config);
 
