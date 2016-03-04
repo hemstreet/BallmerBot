@@ -6,7 +6,7 @@
     var config = require('./config/config'),
     argv = require('yargs').argv,
     lib = (argv.mock) ? 'mock' : 'lib',
-    BallmerBot = require('./' + lib + '/BallmerBot'), // Makeshift mock bot
+    BallmerBot = require('./' + lib + '/BallmerBot'),
     ballmerBot = new BallmerBot(config);
 
 console.log(argv);
