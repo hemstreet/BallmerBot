@@ -1,8 +1,9 @@
-var BallmerBot = function() {
+var BallmerBot = function(config) {
+    this.config = config;
 };
 
-BallmerBot.prototype.pour = function(pump, oz) {
-    this.mock('Pouring ' + oz + 'oz from pump #' + pump);
+BallmerBot.prototype.pour = function(data) {
+    this.mock('Pouring ' + data.oz + 'oz from pump #' + data.pump);
 }
 
 BallmerBot.prototype.mock = function(message) {

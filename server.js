@@ -1,21 +1,34 @@
 "use strict";
 
 //var express = require('express'),
-    //app = express(),
-    //Socket = require('./lib/Socket'),
-    var config = require('./config/config'),
+//app = express(),
+//Socket = require('./lib/Socket'),
+var config = require('./config/config'),
     argv = require('yargs').argv,
     lib = (argv.mock) ? 'mock' : 'lib',
     BallmerBot = require('./' + lib + '/BallmerBot'),
     ballmerBot = new BallmerBot(config);
 
-console.log(argv);
-
-ballmerBot.pour(0,1);
-ballmerBot.pour(1,1);
-ballmerBot.pour(2,1);
-ballmerBot.pour(3,1);
-ballmerBot.pour(4,1);
+ballmerBot.pour({
+    pump: 0,
+    oz: 1
+});
+ballmerBot.pour({
+    pump: 1,
+    oz: 1
+});
+ballmerBot.pour({
+    pump: 2,
+    oz: 1
+});
+ballmerBot.pour({
+    pump: 3,
+    oz: 1
+});
+ballmerBot.pour({
+    pump: 4,
+    oz: 1
+});
 
 //app.use('/', express.static(__dirname + '/app'));
 //
