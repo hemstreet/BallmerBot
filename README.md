@@ -3,6 +3,10 @@ Ballmer Bot
 
 ***Work in progress***
 
+`node server.js`
+for mock
+`node server.js --mock true`
+
 Raspberry pi controller drink maker to reach ballmer's peak.
 
 The concept of Ballmer's peak stems from the xkcd article where it point in which you have had enough drinks to be

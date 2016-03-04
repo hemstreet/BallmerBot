@@ -4,8 +4,8 @@
     //app = express(),
     //Socket = require('./lib/Socket'),
     var config = require('./config/config'),
-    //argv = require('yargs').argv,
-    BallmerBot = require('./lib/BallmerBot'),
+    argv = require('yargs').argv,
+    BallmerBot = (!!argv.mock) ? require('./mock/BallmerBot') : require('./lib/BallmerBot'), // Makeshift mock bot
     ballmerBot = new BallmerBot(config);
 
 ballmerBot.pour(0,1);
