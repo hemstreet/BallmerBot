@@ -5,8 +5,10 @@
     //Socket = require('./lib/Socket'),
     var config = require('./config/config'),
     argv = require('yargs').argv,
-    BallmerBot = (!!argv.mock) ? require('./mock/BallmerBot') : require('./lib/BallmerBot'), // Makeshift mock bot
+    BallmerBot = (argv.mock) ? require('./mock/BallmerBot') : require('./lib/BallmerBot'), // Makeshift mock bot
     ballmerBot = new BallmerBot(config);
+
+console.log(argv);
 
 ballmerBot.pour(0,1);
 ballmerBot.pour(1,1);

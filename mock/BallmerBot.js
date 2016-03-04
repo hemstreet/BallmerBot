@@ -2,7 +2,7 @@ var BallmerBot = function() {
 };
 
 BallmerBot.prototype.pour = function(pump, oz) {
-    this.mock('Pouring' + oz + 'oz from ' + pump);
+    this.mock('Pouring ' + oz + 'oz from pump #' + pump);
 }
 
 BallmerBot.prototype.mock = function(message) {

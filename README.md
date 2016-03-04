@@ -5,7 +5,7 @@ Ballmer Bot
 
 `node server.js`
 for mock
-`node server.js --mock true`
+`node server.js --mock`
 
 Raspberry pi controller drink maker to reach ballmer's peak.
 
