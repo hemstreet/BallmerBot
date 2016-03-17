@@ -3,18 +3,8 @@ Ballmer Bot
 
 ***Work in progress***
 
-Getting Started
-====
-Initial setup run `npm install`
-to start the script run
-
-`node server.js`
-
-
-If you want to develop locally ( without rpi, use the mock option mock ) to simulate gpio actions
-
-`node server.js --mock`
-
+Intro
+===
 Raspberry pi controller drink maker to reach ballmer's peak.
 
 The concept of Ballmer's peak stems from the xkcd article where it point in which you have had enough drinks to be
@@ -27,6 +17,19 @@ Original Comic
 
 Calculator
 [http://www.ballmerpeakathon.com/calc](http://www.ballmerpeakathon.com/calc)
+
+Getting Started
+====
+Initial setup run `npm install`
+to start the script run
+
+`node server.js`
+
+
+If you want to develop locally ( without rpi, use the mock option mock ) to simulate gpio actions
+
+`node server.js --mock`
+
 
 Troubleshooting
 ===
