@@ -3,8 +3,16 @@ Ballmer Bot
 
 ***Work in progress***
 
+Getting Started
+====
+Initial setup run `npm install`
+to start the script run
+
 `node server.js`
-for mock
+
+
+If you want to develop locally ( without rpi, use the mock option mock ) to simulate gpio actions
+
 `node server.js --mock`
 
 Raspberry pi controller drink maker to reach ballmer's peak.
