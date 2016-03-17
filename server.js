@@ -1,10 +1,9 @@
 "use strict";
 
 var express = require('express'),
-app = express(),
-Socket = require('./lib/Socket');
-
-var config = require('./config/config'),
+    app = express(),
+    Socket = require('./lib/Socket'),
+    config = require('./config/config'),
     argv = require('yargs').argv;
 
 // Set debug in config
@@ -14,11 +13,6 @@ var lib = (config.debug) ? 'mock' : 'lib';
 
 var BallmerBot = require('./' + lib + '/BallmerBot'),
     ballmerBot = new BallmerBot(config);
-
-//ballmerBot.pour({
-//    pump: 0,
-//    oz: 1
-//});
 
 app.use('/', express.static(__dirname + '/app'));
 

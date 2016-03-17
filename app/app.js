@@ -12,6 +12,9 @@ app.config(['$routeProvider', function($routeProvider) {
     }).when('/tap', {
         templateUrl: 'views/tap.html',
         controller: 'TapController'
+    }).when('/add', {
+        templateUrl: 'views/tap.html',
+        controller: 'TapController'
     }).otherwise({
         redirectTo: '/'
     });
