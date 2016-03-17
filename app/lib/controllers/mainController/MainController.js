@@ -1,10 +1,13 @@
 "use strict";
 
-angular.module('boilerPlate').controller('MainController', ['$scope', 'socket', function($scope, socket) {
+angular.module('ballmerBot').controller('MainController', ['$scope', 'socket', 'ballmerService', MainController]);
 
-    var vm = this;
+function MainController($scope, socket, ballmerService) {
 
-    vm.pageName = 'Home';
+    $scope.drinks = ballmerService.getAvailableDrinks();
 
-    console.log('main Controller');
-}]);
+    //ballmerService.getAvailableDrinks().then(function(drinks) {
+    //    $scope.drinks = drinks;
+    //});
+
+}
