@@ -1,0 +1,39 @@
+var io = require('socket.io').listen(3000),
+    config = require('./config/config'),
+    Crud = require('./lib/Crud'),
+    _ = require('lodash'),
+    crud = new Crud({
+        io: io
+    });
+
+io.sockets.on('connection', function (socket) {
+
+    socket.on(config.events.willCreate, function(data) {
+        crud.create(socket, data);
+    });
+
+    socket.on(config.events.willFind, function(data) {
+        crud.find(socket, data);
+    });
+
+    socket.on(config.events.willFindById, function(data) {
+        crud.findById(socket, data);
+    });
+
+    socket.on(config.events.willUpdate, function(data) {
+        crud.update(socket, data);
+    });
+
+    socket.on(config.events.willUpdateById, function(data) {
+        crud.updateById(socket, data);
+    });
+
+    socket.on(config.events.willDelete, function(data) {
+        crud.delete(socket, data);
+    });
+
+    socket.on(config.events.willDeleteById, function(data) {
+        crud.deleteById(socket, data);
+    });
+
+});

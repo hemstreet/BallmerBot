@@ -4,7 +4,9 @@ angular.module('ballmerBot').controller('MainController', ['$scope', 'socket', '
 
 function MainController($scope, socket, ballmerService) {
 
-    $scope.drinks = ballmerService.getAvailableDrinks();
+    ballmerService.getAvailableDrinks().then(function(drinks) {
+        $scope.drinks = drinks;
+    });
 
     //ballmerService.getAvailableDrinks().then(function(drinks) {
     //    $scope.drinks = drinks;

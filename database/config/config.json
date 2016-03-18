@@ -1,0 +1,19 @@
+{
+  "mongo" : "mongodb://localhost/socket",
+  "events" : {
+    "willCreate" : "Event:will-create",
+    "didCreate" : "Event:did-create",
+    "willFind" : "Event:will-find",
+    "didFind" : "Event:did-find",
+    "willFindById" : "Event:will-find-by-id",
+    "didFindById" : "Event:did-find-by-id",
+    "willUpdate" : "Event:will-update",
+    "didUpdate" : "Event:did-update",
+    "willUpdateById" : "Event:will-update-by-id",
+    "didUpdateById" : "Event:did-update-by-id",
+    "willDelete" : "Event:will-delete",
+    "didDelete" : "Event:did-delete",
+    "willDeleteById" : "Event:will-delete-by-id",
+    "didDeleteById" : "Event:did-delete-by-id"
+    }
+}

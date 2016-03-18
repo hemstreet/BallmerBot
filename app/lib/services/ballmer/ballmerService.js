@@ -20,7 +20,15 @@ function BallmerService($q, socket) {
     };
 
     this.getAvailableDrinks = function() {
+        var deferred = $q.defer();
+
         socket.emit('DRINK:WillGetAvailableDrinks');
+
+        socket.on('DRINK:DidGetAvailableDrinks', function(drinks) {
+            deferred.resolve(drinks);
+        });
+
+        return deferred.promise;
     }
 
 }

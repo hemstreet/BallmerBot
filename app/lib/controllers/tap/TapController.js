@@ -8,4 +8,4 @@ function TapController($scope, socket, ballmerService) {
         $scope.inventory = inventory;
     });
 
-};
+}
