@@ -22874,7 +22874,7 @@ var ngCloakDirective = ngDirective({
  * * one injects `$scope` into the controller:
  * `ng-controller="SettingsController2"`
  *
- * The second option is more common in the Angular community, and is generally used in ballmerBots
+ * The second option is more common in the Angular community, and is generally used in boilerplates
  * and in this guide. However, there are advantages to binding properties directly to the controller
  * and avoiding scope.
  *

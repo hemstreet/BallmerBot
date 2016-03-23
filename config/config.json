@@ -1,8 +1,6 @@
 {
-  "dbPath" : "mongodb://localhost/ballmerBot",
-  "dbName" : "mongoose",
-  "oz" : 20000,
-  "port" : 8080,
+  "ozInMilis" : 20000,
+  "port" : "8081",
   "pumps": [
     29,
     31,

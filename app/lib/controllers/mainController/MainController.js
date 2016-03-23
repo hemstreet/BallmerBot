@@ -1,13 +1,7 @@
-"use strict";
+angular.module('ballmerBot').controller('MainController', ['$scope', function($scope) {
+    var vm = this;
 
-angular.module('ballmerBot').controller('MainController', ['$scope', 'socket', 'ballmerService', MainController]);
+    vm.pageName = 'Home';
 
-function MainController($scope, socket, ballmerService) {
-
-    $scope.drinks = ballmerService.getAvailableDrinks();
-
-    //ballmerService.getAvailableDrinks().then(function(drinks) {
-    //    $scope.drinks = drinks;
-    //});
-
-}
+    console.log('main Controller');
+}]);

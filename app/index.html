@@ -4,30 +4,20 @@
 </head>
 <body>
 
-<!-- Module files -->
-<script src="assets/vendor/js/socket.io-1.4.3.js"></script>
 <script src="bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
 <script src="bower_components/angular/angular.min.js" type="text/javascript"></script>
 <script src="bower_components/angular-route/angular-route.min.js" type="text/javascript"></script>
-<script src="bower_components/angular-socket-io/socket.min.js" type="text/javascript"></script>
-
-<!-- Bootstrap our app -->
 <script src="app.js" type="text/javascript"></script>
 
 <!-- Controllers -->
-<script src="lib/controllers/addController/AddController.js" type="text/javascript"></script>
 <script src="lib/controllers/mainController/MainController.js" type="text/javascript"></script>
-<script src="lib/controllers/tap/TapController.js" type="text/javascript"></script>
 
 <!-- Directives -->
-<script src="lib/directives/pour/pourDirective.js" type="text/javascript"></script>
+<script src="lib/directives/bottleList/bottleListDirective.js" type="text/javascript"></script>
 
 <!-- Services -->
-<script src="lib/services/ballmer/ballmerService.js" type="text/javascript"></script>
+<script src="lib/services/drink/drinkService.js" type="text/javascript"></script>
 
-<a ng-href="#/">Home</a>
-<a ng-href="#/tap">Tap</a>
-<a ng-href="#/add">Add</a>
 <div ng-view></div>
 
 </body>
