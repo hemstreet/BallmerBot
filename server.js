@@ -3,8 +3,19 @@
 var express = require('express'),
     app = express(),
     config = require('./config/config'),
-    argv = require('yargs').argv,
-    BallmerBot = require('./lib/BallmerBot');
+    BallmerBot = require('./lib/BallmerBot'),
+    argv = require('yargs').usage('Ballmer Bot - Drink pouring bot\n Usage: $0').options('mock', {
+        describe:  'Run the server in mock mode ( simulated Pi )'
+    }).options('port', {
+        describe:  'Port for the sever to run on'
+    }).boolean('help')
+        .alias('help', 'h')
+        .describe('help', 'display help').argv;
+
+if (argv.help) {
+    require('yargs').showHelp();
+    return;
+}
 
 config.debug = !!argv.mock;
 
