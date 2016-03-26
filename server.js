@@ -10,7 +10,8 @@ config.debug = !!argv.mock;
 
 var ballmerBot = new BallmerBot(config);
 
-app.use('/', express.static(__dirname + '/app'));
+
+app.use(express.static('app'));
 
 app.get('/', function (req, res) {
     res.sendFile('/index.html');
