@@ -20,6 +20,8 @@ Calculator
 
 Getting Started
 ====
+run `node server.js -h` for help
+
 Initial setup run `npm install`
 to start the script run
 
