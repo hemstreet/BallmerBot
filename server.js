@@ -1,8 +1,11 @@
-#!/usr/bin/env node
+"use strict";
 
 var express = require('express'),
     app = express(),
-    config = require('./config/config'),
+    bodyParser = require('body-parser'),
+    config = require('./lib/config/config'),
+    Database = require('./lib/Database'),
+    db = new Database(config),
     BallmerBot = require('./lib/BallmerBot'),
     argv = require('yargs').usage('Ballmer Bot - Drink pouring bot\n Usage: $0 [,options]').options('mock', {
         describe:  'Run the server in mock mode ( simulated Pi )'
@@ -23,11 +26,17 @@ var ballmerBot = new BallmerBot(config);
 
 app.use(express.static('app'));
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json()); // Body parser use JSON data
+
 app.get('/', function (req, res) {
     res.sendFile('/index.html');
 });
 
-require('./routes/api')(app, ballmerBot);
+require('./lib/routes/api')(app, {
+    ballmetBot: ballmerBot,
+    db: db
+});
 
 var server = app.listen(argv.port || config.port || 8080, function () {
     var serverAddress = server.address();

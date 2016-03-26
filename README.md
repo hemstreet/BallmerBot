@@ -34,6 +34,8 @@ If you want to develop locally ( without rpi, use the mock option mock ) to simu
 Troubleshooting
 ===
 
+
+
 For errors like
 ```
 Error when trying to open pin 16
