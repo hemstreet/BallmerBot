@@ -1,6 +1,5 @@
 {
   "ozInMilis" : 20000,
-  "dbPath" : "localhost/ballmer",
   "port" : "8081",
   "pumps": [
     29,

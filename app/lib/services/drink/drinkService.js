@@ -1,16 +1,5 @@
 angular.module('ballmerBot').service('drinkService', ['$http', '$q', function($http, $q) {
 
-    this.addBottle = function(bottle, pump) {
-        var deferred = $q.defer();
-        $http.get('/add/' + bottle + '/' + pump).then(function(response) {
-            deferred.resolve(response.data.message);
-        }, function() {
-            deferred.reject(response.error);
-        });
-
-        return deferred.promise;
-    };
-
     this.getBottles = function() {
         var deferred = $q.defer();
         $http.get('/bottles').then(function(response) {

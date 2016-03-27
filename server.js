@@ -4,8 +4,6 @@ var express = require('express'),
     app = express(),
     bodyParser = require('body-parser'),
     config = require('./lib/config/config'),
-    Database = require('./lib/Database'),
-    db = new Database(config),
     BallmerBot = require('./lib/BallmerBot'),
     argv = require('yargs').usage('Ballmer Bot - Drink pouring bot\n Usage: $0 [,options]').options('mock', {
         describe:  'Run the server in mock mode ( simulated Pi )'
@@ -34,8 +32,7 @@ app.get('/', function (req, res) {
 });
 
 require('./lib/routes/api')(app, {
-    ballmetBot: ballmerBot,
-    db: db
+    ballmetBot: ballmerBot
 });
 
 var server = app.listen(argv.port || config.port || 8080, function () {

@@ -10,7 +10,6 @@ function BottleList() {
 
 function BottleListController($scope, drinkService) {
 
-    //$scope.bottles = "test";
     drinkService.getBottles().then(function(bottles) {
         $scope.bottles = bottles;
     });
