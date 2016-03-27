@@ -2,6 +2,7 @@
 
 var express = require('express'),
     app = express(),
+    cors = require('cors'),
     bodyParser = require('body-parser'),
     config = require('./lib/config/config'),
     BallmerBot = require('./lib/BallmerBot'),
@@ -26,13 +27,14 @@ app.use(express.static('app'));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json()); // Body parser use JSON data
+app.use(cors());
 
 app.get('/', function (req, res) {
     res.sendFile('/index.html');
 });
 
 require('./lib/routes/api')(app, {
-    ballmetBot: ballmerBot
+    ballmerBot: ballmerBot
 });
 
 var server = app.listen(argv.port || config.port || 8080, function () {

@@ -13,4 +13,8 @@ function BottleListController($scope, drinkService) {
     drinkService.getBottles().then(function(bottles) {
         $scope.bottles = bottles;
     });
+
+    $scope.pour = function(pump, oz) {
+        drinkService.pour(pump, oz);
+    };
 }
