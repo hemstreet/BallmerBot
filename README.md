@@ -55,3 +55,6 @@ run `gpio-admin export 16`
 Resources
 ===
 [http://www.thecocktaildb.com/](http://www.thecocktaildb.com/)
+[http://raspberrypi.stackexchange.com/questions/27572/how-to-auto-start-chromium-after-boot-on-the-raspberry-2-2015-01-31-debian-whee](Start chromium on boot)
+
+`sudo crontab -e` for @reboot sudo /usr/bin/node /path/to/script.js &
