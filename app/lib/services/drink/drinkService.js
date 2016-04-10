@@ -21,12 +21,8 @@ angular.module('ballmerBot').service('drinkService', ['$http', '$q', function($h
     this.getAvailableDrinks = function() {
 
         var deferred = $q.defer();
-        this.getDrinks().then(function(response) {
-            deferred.resolve(response.data.entries);
-        }).fail(function(err) {
-            console.log(err);
-            this.getDrinks(deferred);
-        }.bind(this));
+
+        this.getDrinks(deferred);
 
         return deferred.promise;
     };
