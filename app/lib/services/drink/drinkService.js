@@ -21,22 +21,14 @@ angular.module('ballmerBot').service('drinkService', ['$http', '$q', function($h
     this.getAvailableDrinks = function() {
 
         var deferred = $q.defer();
-
-        this.getDrinks(deferred);
-
-        return deferred.promise;
-    };
-
-    this.getDrinks = function(deferred) {
-
         $http.get(baseUrl + '/list/Drink', options).then(function(response) {
             deferred.resolve(response.data.entries);
-        }, function(err) {
-            console.log(err);
-            // Recursive loop drinks until we get a success
-            this.getDrinks(deferred);
-        }.bind(this));
+        }, function(response) {
+            document.write(response.error);
+            deferred.reject(response.error);
+        });
 
+        return deferred.promise;
     };
 
     this.pourDrink = function(name) {
