@@ -23,13 +23,11 @@ config.debug = !!argv.mock;
 
 var ballmerBot = new BallmerBot(config);
 
-console.log(__dirname);
 app.use('/', express.static(__dirname + '/app'));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json()); // Body parser use JSON data
 app.use(cors());
-
 
 
 app.get('/', function (req, res) {
