@@ -2,7 +2,6 @@
 
 var express = require('express'),
     app = express(),
-    path = require('path'),
     cors = require('cors'),
     bodyParser = require('body-parser'),
     config = require('./lib/config/config'),
@@ -24,7 +23,8 @@ config.debug = !!argv.mock;
 
 var ballmerBot = new BallmerBot(config);
 
-app.use(express.static(path.join(__dirname, '/../app')));
+console.log(__dirname);
+app.use('/', express.static(__dirname + '/app'));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json()); // Body parser use JSON data
