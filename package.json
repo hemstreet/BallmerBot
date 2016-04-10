@@ -14,7 +14,6 @@
     "body-parser": "^1.15.0",
     "cors": "^2.7.1",
     "express": "^4.13.4",
-    "mean-street": "^1.1.1",
     "mongoose": "^4.4.10",
     "pi-gpio": "0.0.8",
     "q": "^1.4.1",
