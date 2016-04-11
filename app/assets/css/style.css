@@ -1,0 +1,7 @@
+body .container .tile h3 {
+  margin-top: 0;
+}
+body .container .tile-medium {
+  width: 100%;
+  min-height: 200px;
+}
