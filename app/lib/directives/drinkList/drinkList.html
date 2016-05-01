@@ -1,8 +1,8 @@
-<h3>Drinks</h3>
-<div class="col-xs-4 col-sm-3" ng-repeat="(key, value) in drinks">
-    <div class="thumbnail tile tile-medium tile-teal">
-        <a ng-click="pourDrink(value)">
+<div class="row">
+    <h3>Drinks</h3>
+    <div class="col-xs-4 col-sm-3" ng-repeat="(key, value) in drinks">
+        <div class="thumbnail tile tile-medium tile-teal" ng-click="pourDrink(value)">
             <h3>{{value["name"]}}</h3>
-        </a>
+        </div>
     </div>
 </div>

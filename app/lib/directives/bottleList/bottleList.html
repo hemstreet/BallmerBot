@@ -1,2 +1,4 @@
-<h3>Bottles</h3>
-<button ng-repeat="(key, value) in bottles" ng-click="pour(value['pump'], 1)" data-pump="{{value['pump']}}" type="button" class="btn btn-primary">{{value["name"]}}</button>
+<div class="row">
+    <h3>Bottles</h3>
+    <button ng-repeat="(key, value) in bottles" ng-click="pour(value['pump'], 1)" data-pump="{{value['pump']}}" type="button" class="btn btn-primary">{{value["name"]}}</button>
+</div>
