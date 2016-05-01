@@ -1,3 +1,6 @@
+body {
+  padding: 0 16px;
+}
 body .container .tile h3 {
   margin-top: 0;
 }
