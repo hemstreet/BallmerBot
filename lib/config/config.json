@@ -1,5 +1,5 @@
 {
-  "ozInMilis" : 20000,
+  "ozInMilis" : 1200,
   "port" : "8081",
   "pumps": [
     29,

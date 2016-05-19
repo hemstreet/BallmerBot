@@ -10,7 +10,7 @@ Raspberry pi controller drink maker to reach ballmer's peak.
 The concept of Ballmer's peak stems from the xkcd article where it point in which you have had enough drinks to be
 at your programming peak. After another drink it is downhill and productivity is hindered.
 
-`20000 milliseconds @12V DC for the following was pump was 1 oz http://www.amazon.com/gp/product/B00F9MXFFQ?psc=1&redirect=true&ref_=oh_aui_detailpage_o02_s01`
+[This was the pump I used](http://www.amazon.com/Priming-Diaphragm-Spray-Motor-Dispenser/dp/B00HR8MS7G)
 
 Original Comic
 [https://xkcd.com/323/](https://xkcd.com/323/)

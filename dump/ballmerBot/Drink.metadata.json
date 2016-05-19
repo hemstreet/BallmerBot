@@ -1,0 +1,1 @@
+{ "options" : { "create" : "Drink" }, "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "ns" : "ballmerBot.Drink", "name" : "_id_" } ] }
