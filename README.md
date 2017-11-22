@@ -1,8 +1,6 @@
 Ballmer Bot
 ==
 
-***Work in progress***
-
 Intro
 ===
 Raspberry pi controller drink maker to reach ballmer's peak.
@@ -44,6 +42,27 @@ Error when trying to open pin 16
 gpio-admin: failed to change group ownership of /sys/devices/virtual/gpio/gpio23/direction: No such file or directory
 ``````
 run `gpio-admin export 16`
+
+
+If the problem still exists, build the newest version of gpio-admin yourself.
+
+Choose a directory you want to put gpio-admin in, and run
+
+`git clone https://github.com/quick2wire/quick2wire-gpio-admin.git`
+`cd quick2wire-gpio-admin`
+
+If src/gpio-admin.c has
+
+`int size = snprintf(path, PATH_MAX, "/sys/devices/virtual/gpio/gpio%u/%s", pin, filename);`
+change it to
+
+`int size = snprintf(path, PATH_MAX, GPIO_CLASS_PATH "gpio%u/%s", pin, filename);`
+Then, run 
+`make`
+
+Then, run
+
+`sudo make install`
 
 @TODO
 ===
